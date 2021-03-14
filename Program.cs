@@ -10,6 +10,8 @@ namespace sharpsnake
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("helloworld");
+            Console.ReadLine();
         }
     }
 }
