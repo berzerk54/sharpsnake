@@ -11,6 +11,7 @@ namespace sharpsnake
     {   
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
             Console.SetWindowSize(60, 25);
             Console.SetBufferSize(60, 25);
 
@@ -28,7 +29,18 @@ namespace sharpsnake
             v1.Draw();
             v2.Draw();
             snake.Draw();
-            snake.Move();
+
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandleKey(key.Key);
+                }
+                Thread.Sleep(100);
+                snake.Move();
+            }   
+           
            
         }
     }
