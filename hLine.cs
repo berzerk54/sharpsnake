@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace sharpsnake
 {
-    class hLine
+    class hLine :Figure
     {
-        List<Point> obstacleList;
+       
 
         public hLine(int xLeft, int xRight,int y, char sym)
         {
@@ -22,13 +22,6 @@ namespace sharpsnake
 
         }
 
-        public void Draw()
-        {
-            foreach (Point p in obstacleList)
-            {
-                p.Draw();
-
-            }
-        }
+        
     }
 }
