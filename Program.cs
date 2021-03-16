@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace sharpsnake
@@ -20,14 +21,15 @@ namespace sharpsnake
             vLine v1 = new vLine(2, 22, 5, '#');
             vLine v2 = new vLine(2, 22, 55, '#');
             Snake snake = new Snake(p1, 4, Direction.RIGHT);
-            snake.Draw();
+            
            
             h1.Draw();
             h2.Draw();
             v1.Draw();
             v2.Draw();
-
-            Console.ReadLine();
+            snake.Draw();
+            snake.Move();
+           
         }
     }
 }
