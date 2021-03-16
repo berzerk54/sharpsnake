@@ -22,6 +22,17 @@ namespace sharpsnake
 
         }
 
-        
+        public override void Draw()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            foreach (Point p in obstacleList)
+            {
+                p.Draw();
+            }
+
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+
     }
 }

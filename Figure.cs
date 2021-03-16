@@ -9,7 +9,7 @@ namespace sharpsnake
     class Figure
     {
         protected List<Point> obstacleList;
-        public void Draw()
+        public virtual void Draw()
         {
             foreach (Point p in obstacleList)
             {
