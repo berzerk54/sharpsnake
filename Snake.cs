@@ -52,6 +52,18 @@ namespace sharpsnake
             else return false;
         }
 
+        internal bool IsHitTail()
+        {
+            var head = obstacleList.Last();
+            for (int i = 0; i< obstacleList.Count-2;i++)
+            {
+                if (head.IsHit(obstacleList[i]))
+                    return true;
+            }
+            return false;
+            
+        }
+
         public void HandleKey(ConsoleKey key)
         {
             if (key == ConsoleKey.LeftArrow && direction != Direction.RIGHT)
